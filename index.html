@@ -66,19 +66,19 @@ var data = await response.json();
     document.querySelector(".humidity").innerHTML = data.main.humidity + "%";
     document.querySelector(".wind").innerHTML = data.wind.speed + "kmph";
 
-    if(data.weather[0].main == "Clouds"){
+    if(data.weather[0].main === "Clouds"){
         weathericon.scr = "/clear.png";
     }
-    else if(data.weather[0].main == "Rain"){
+    else if(data.weather[0].main === "Rain"){
         weathericon.scr = "/rain.png";
     }
-    else if(data.weather[0].main == "Clear"){
+    else if(data.weather[0].main === "Clear"){
         weathericon.scr = "/clear.png";
     }
-    else if(data.weather[0].main == "Drizzle"){
+    else if(data.weather[0].main === "Drizzle"){
         weathericon.scr = "/drizzle.png";
     }
-    else if(data.weather[0].main == "Mist"){
+    else if(data.weather[0].main === "Mist"){
         weathericon.scr = "/mist.png";
     }
 
